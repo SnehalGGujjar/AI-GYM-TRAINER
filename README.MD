@@ -94,11 +94,30 @@ Build a cost-effective, webcam-based AI coach that can:
    ```bash
    http://127.0.0.1:5000/
    ```
+## 📸 Demo Screenshots
 
-![image](C:\Users\Lenovo\AppData\Local\Microsoft\Windows\INetCache\IE\3QD7ONUT\7a878f8c5449465ea8f5b3bc699210e5[1].jpg)
+Here are a few highlights from the AI Gym Trainer App:
 
-![image](https://user-images.githubusercontent.com/12345678/your-image.png)
-![image](https://user-images.githubusercontent.com/12345678/your-image.png)
+### 🏠 Home Page
+![Home](https://github.com/user-attachments/assets/4cd52dfd-83a6-4787-8d9b-1f2eb90711dd)
+
+### 📊 Dashboard
+![Dashboard](https://github.com/user-attachments/assets/1f39c41d-a0ed-4cd4-8e8c-5aa13c6f02a3)
+
+### 🔍 Pose Detection
+![Pose Detection](https://github.com/user-attachments/assets/7b86b3a8-d3b8-41f0-945f-c5c37685eab7)
+
+### 💬 Voice Feedback
+![Voice Feedback](https://github.com/user-attachments/assets/c02bf2ee-7f6d-4b36-8a96-6d4416f3b34a)
+
+### 🧮 Calorie Tracker
+![Calories](https://github.com/user-attachments/assets/bf4df9ec-102b-4cc2-b44a-3ee94370c098)
+
+### 📈 Progress Graphs
+![Progress](https://github.com/user-attachments/assets/a22c6932-0e52-46ed-8d79-584d660a351b)
+
+### 📅 History & Streaks
+![History](https://github.com/user-attachments/assets/7dc07cec-4ca3-4e1e-8f50-71b46ad69c2e)
 
 
 
