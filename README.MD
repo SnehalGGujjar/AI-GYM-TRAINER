@@ -73,16 +73,40 @@ Build a cost-effective, webcam-based AI coach that can:
    ```bash
    git clone https://github.com/SnehalGGujjar/AI-GYM-TRAINER.git
    cd AI-GYM-TRAINER
+
+🔧 Installation & Setup (Windows)
+Clone the repository
+
+bash
+Copy
+Edit
+git clone https://github.com/SnehalGGujjar/AI-GYM-TRAINER.git
+cd AI-GYM-TRAINER
 Set up a virtual environment
+
+bash
+Copy
+Edit
 python -m venv venv
-venv\Scripts\activate  # (For Windows)
+venv\Scripts\activate
 Install the dependencies
+
+bash
+Copy
+Edit
 pip install -r requirements.txt
 Run the application
-python app.py
-Open your browser
-http://127.0.0.1:5000/
 
+bash
+Copy
+Edit
+python app.py
+Open in your browser
+
+bash
+Copy
+Edit
+http://127.0.0.1:5000/
 
 
 
