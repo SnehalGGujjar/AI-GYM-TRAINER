@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Motivation</title>
+  <style>
+    body {
+      background: #121212;
+      color: #4caf50;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 50px;
+      text-align: center;
+    }
+    .quote-box {
+      background: #1e1e1e;
+      border-radius: 20px;
+      padding: 40px;
+      margin: auto;
+      width: 70%;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+    .quote-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+    }
+    h1 {
+      margin-bottom: 30px;
+      color: #81c784;
+    }
+    .quote {
+      font-size: 24px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .author {
+      font-size: 18px;
+      color: #aaa;
+    }
+    a {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #4caf50;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Daily Motivation</h1>
+
+  <div class="quote-box">
+    <div class="quote">{{ quote.text }}</div>
+    <div class="author">- {{ quote.author }}</div>
+  </div>
+
+  <a href="/">← Back to Home</a>
+
+</body>
+</html>

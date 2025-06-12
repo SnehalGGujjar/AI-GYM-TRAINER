@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Diet Recipes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .recipe-card {
+      width: 600px;
+      background: #1e1e1e;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .recipe-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 30px rgba(0,255,0,0.6);
+    }
+    .recipe-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 3px solid #4caf50;
+    }
+    .recipe-content {
+      padding: 25px;
+    }
+    .recipe-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #4caf50;
+    }
+    .recipe-details {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .calories {
+      font-size: 18px;
+      font-weight: 600;
+      color: #81c784;
+    }
+    nav {
+      text-align: center;
+      margin-top: 60px;
+    }
+    nav a {
+      color: #4caf50;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Indian Diet Recipes</h1>
+
+  <div class="recipe-container">
+    {% for recipe in recipes %}
+      <div class="recipe-card">
+        <img src="{{ url_for('static', filename='diet_images/' + recipe.image) }}" alt="{{ recipe.name }}" />
+        <div class="recipe-content">
+          <div class="recipe-title">{{ recipe.name }}</div>
+          <div class="recipe-details">{{ recipe.description }}</div>
+          <div class="calories">Calories: {{ recipe.calories }} kcal</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <nav>
+    <a href="/">Back to Home</a>
+  </nav>
+
+</body>
+</html>

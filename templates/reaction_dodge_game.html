@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reaction Dodge Game</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #0f0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      color: #0f0;
+    }
+
+    #gameArea {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 100px);
+      overflow: hidden;
+    }
+
+    .sentence {
+      position: absolute;
+      padding: 10px 15px;
+      background-color: #111;
+      border: 2px solid #0f0;
+      border-radius: 10px;
+      color: #0f0;
+      font-size: 16px;
+      cursor: grab;
+      user-select: none;
+    }
+
+    .bin {
+      position: absolute;
+      bottom: 20px;
+      width: 200px;
+      height: 200px;
+      background-color: #111;
+      border: 3px dashed #0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 20px;
+    }
+
+    #goodBin {
+      left: 50px;
+    }
+
+    #badBin {
+      right: 50px;
+    }
+
+    a {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #0f0;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: #111;
+      padding: 8px 12px;
+      border: 1px solid #0f0;
+      border-radius: 6px;
+    }
+
+    a:hover {
+      background-color: #0f0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <a href="/">← Home</a>
+  <h1>Reaction Dodge Game</h1>
+  <div id="gameArea">
+    <div id="goodBin" class="bin">Good Habit</div>
+    <div id="badBin" class="bin">Bad Habit</div>
+  </div>
+
+  <script>
+    const goodBin = document.getElementById("goodBin");
+    const badBin = document.getElementById("badBin");
+    const gameArea = document.getElementById("gameArea");
+
+    const goodHabits = [
+      "Drink water",
+      "Exercise daily",
+      "Eat vegetables",
+      "Meditate",
+      "Sleep 8 hours"
+    ];
+
+    const badHabits = [
+      "Skip workouts",
+      "Eat junk food",
+      "Sleep late",
+      "Overuse phone",
+      "Avoid hydration"
+    ];
+
+    function dropSentence() {
+      const isGood = Math.random() > 0.5;
+      const text = isGood
+        ? goodHabits[Math.floor(Math.random() * goodHabits.length)]
+        : badHabits[Math.floor(Math.random() * badHabits.length)];
+
+      const div = document.createElement("div");
+      div.className = "sentence";
+      div.innerText = text;
+      div.setAttribute("data-type", isGood ? "good" : "bad");
+      div.draggable = true;
+      div.style.left = Math.random() * (window.innerWidth - 200) + "px";
+      div.style.top = "-50px";
+
+      let y = -50;
+      const interval = setInterval(() => {
+        y += 0.8; // Slower falling speed
+        div.style.top = y + "px";
+        if (y > window.innerHeight) {
+          clearInterval(interval);
+          div.remove();
+        }
+      }, 16);
+
+      div.ondragstart = (e) => {
+        e.dataTransfer.setData("text/plain", div.innerText);
+        e.dataTransfer.setData("type", div.getAttribute("data-type"));
+        clearInterval(interval);
+      };
+
+      gameArea.appendChild(div);
+    }
+
+    setInterval(dropSentence, 2500); // Drop every 2.5 seconds
+
+    function setupBin(bin, type) {
+      bin.ondragover = (e) => e.preventDefault();
+
+      bin.ondrop = (e) => {
+        e.preventDefault();
+        const droppedType = e.dataTransfer.getData("type");
+        if (droppedType === type) {
+          alert("✅ Correct!");
+        } else {
+          alert("❌ Wrong bin!");
+        }
+      };
+    }
+
+    setupBin(goodBin, "good");
+    setupBin(badBin, "bad");
+  </script>
+  <a href="/" class="home-link">← Home</a>
+
+</html>

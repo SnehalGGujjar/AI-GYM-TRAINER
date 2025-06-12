@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fitness Chatbot</title>
+  <style>
+    body {
+      background: #111;
+      color: #0f0;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    .chatbox {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .messages {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #0f0;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #000;
+    }
+    .messages div {
+      margin-bottom: 8px;
+      white-space: pre-wrap;
+    }
+    .user { color: #0ff; text-align: right; }
+    .bot { color: #0f0; text-align: left; }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px;
+      background: #0f0;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    a {
+      color: #0f0;
+      text-decoration: none;
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    a:hover {
+      text-shadow: 0 0 10px #0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fitness & Wellness Chatbot</h1>
+  <div class="chatbox">
+    <div class="messages" id="messages"></div>
+    <input type="text" id="userInput" placeholder="Ask me something..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <a href="/">← Back to Home</a>
+
+  <script>
+    const messages = document.getElementById("messages");
+
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const userMsg = input.value.trim();
+      if (!userMsg) return;
+
+      appendMessage("user", userMsg);
+      input.value = "";
+
+      setTimeout(() => {
+        const response = getBotReply(userMsg);
+        appendMessage("bot", response);
+      }, 500);
+    }
+
+    function appendMessage(type, text) {
+      const msg = document.createElement("div");
+      msg.className = type;
+      msg.innerText = text;
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function getBotReply(input) {
+      const msg = input.toLowerCase();
+
+      if (msg.includes("motivate") || msg.includes("lazy")) {
+        return `You're stronger than your excuses. Start small — even 10 minutes of movement can improve your mood. 
+Every drop of sweat is a step toward progress. Keep showing up. 💪`;
+      }
+      else if (msg.includes("diet")) {
+        return `A balanced diet is crucial. Prioritize protein (paneer, eggs, dal), healthy fats (nuts, seeds), and complex carbs (oats, veggies).
+Stay hydrated, eat whole foods, and avoid packaged junk as much as possible. Consistency matters more than perfection.`;
+      }
+      else if (msg.includes("mental")) {
+        return `Mental health matters as much as physical health. 
+Try breathing exercises, journaling, or listening to calm music after a stressful day.
+Also, regular workouts release endorphins — natural mood lifters.`;
+      }
+      else if (msg.includes("water")) {
+        return `Water is essential for metabolism, skin, energy, and brain function.
+Try to drink a glass every hour. Carry a bottle with you. Aim for 2.5 to 3 liters daily.`;
+      }
+      else if (msg.includes("workout") || msg.includes("exercise")) {
+        return `Great choice! Start with warm-ups like jumping jacks, then try bodyweight workouts (squats, pushups, planks).
+If you're new, aim for 3–4 days a week. Consistency beats intensity — focus on forming the habit.`;
+      }
+      else if (msg.includes("sleep")) {
+        return `Sleep is where recovery and muscle repair happens. 
+Aim for 7–9 hours per night. Avoid screens 1 hour before bed. 
+Establish a calming nighttime routine to wind down.`;
+      }
+      else if (msg.includes("abs") || msg.includes("belly")) {
+        return `Abs are made in the kitchen! Combine regular cardio, core exercises (like planks), and a calorie-controlled high-protein diet.
+Spot reduction is a myth — focus on full-body fat loss.`;
+      }
+      else {
+        return `I'm here to support your fitness journey! 💪
+Ask me anything about diet, motivation, exercise, recovery, or hydration.`;
+      }
+    }
+  </script>
+</body>
+</html>

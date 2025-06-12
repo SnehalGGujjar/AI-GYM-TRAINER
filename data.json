@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Snehal ",
+    "age": 21,
+    "height_cm": 163.0,
+    "weight_kg": 80.0,
+    "water_liters": 4.0,
+    "sleep_hours": 6.0,
+    "bmi": 30.11,
+    "suggestion": "You are overweight. Focus on cardio (HIIT, running) and portion control."
+  },
+  {
+    "name": "Snehal Gujjar ",
+    "age": 89,
+    "height_cm": 787.0,
+    "weight_kg": 78.0,
+    "water_liters": 5.0,
+    "sleep_hours": 8.0,
+    "bmi": 1.26,
+    "suggestion": "You are underweight. Consider strength training and a high-protein diet."
+  },
+  {
+    "name": "Snehal Gujjar ",
+    "age": 30,
+    "height_cm": 163.0,
+    "weight_kg": 55.0,
+    "water_liters": 6.0,
+    "sleep_hours": 7.0,
+    "bmi": 20.7,
+    "suggestion": "You have a normal BMI. Maintain with regular cardio and balanced diet."
+  },
+  {
+    "name": "prag",
+    "age": 56,
+    "height_cm": 165.0,
+    "weight_kg": 87.0,
+    "water_liters": 4.0,
+    "sleep_hours": 5.0,
+    "bmi": 31.96,
+    "suggestion": "You are overweight. Focus on cardio (HIIT, running) and portion control."
+  },
+  {
+    "name": "sonu",
+    "age": 32,
+    "height_cm": 163.0,
+    "weight_kg": 103.0,
+    "water_liters": 3.0,
+    "sleep_hours": 5.0,
+    "bmi": 38.77,
+    "suggestion": "You are overweight. Focus on cardio (HIIT, running) and portion control."
+  },
+  {
+    "name": "mnv",
+    "age": 56,
+    "height_cm": 170.0,
+    "weight_kg": 90.0,
+    "water_liters": 5.0,
+    "sleep_hours": 8.0,
+    "bmi": 31.14,
+    "suggestion": "You are overweight. Focus on cardio (HIIT, running) and portion control."
+  },
+  {
+    "name": "Snehal ",
+    "age": 21,
+    "height_cm": 175.0,
+    "weight_kg": 45.0,
+    "water_liters": 6.0,
+    "sleep_hours": 8.0,
+    "bmi": 14.69,
+    "suggestion": "You are underweight. Consider strength training and a high-protein diet."
+  },
+  {
+    "name": "sanika",
+    "age": 21,
+    "height_cm": 175.0,
+    "weight_kg": 45.0,
+    "water_liters": 6.0,
+    "sleep_hours": 8.0,
+    "bmi": 14.69,
+    "suggestion": "You are underweight. Consider strength training and a high-protein diet."
+  },
+  {
+    "name": "Snehal ",
+    "age": 21,
+    "height_cm": 163.0,
+    "weight_kg": 70.0,
+    "water_liters": 6.0,
+    "sleep_hours": 6.0,
+    "bmi": 26.35,
+    "suggestion": "You are overweight. Focus on cardio (HIIT, running) and portion control."
+  }
+]
