@@ -67,46 +67,34 @@ Build a cost-effective, webcam-based AI coach that can:
 
 ---
 
-## 🔧 Installation & Setup
 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/SnehalGGujjar/AI-GYM-TRAINER.git
    cd AI-GYM-TRAINER
+   ```
 
-🔧 Installation & Setup (Windows)
-Clone the repository
+2. **Set up a virtual environment**
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
 
-bash
-Copy
-Edit
-git clone https://github.com/SnehalGGujjar/AI-GYM-TRAINER.git
-cd AI-GYM-TRAINER
-Set up a virtual environment
+3. **Install the dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-bash
-Copy
-Edit
-python -m venv venv
-venv\Scripts\activate
-Install the dependencies
+4. **Run the application**
+   ```bash
+   python app.py
+   ```
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the application
+5. **Open in your browser**
+   ```bash
+   http://127.0.0.1:5000/
+   ```
 
-bash
-Copy
-Edit
-python app.py
-Open in your browser
-
-bash
-Copy
-Edit
-http://127.0.0.1:5000/
 
 
 
