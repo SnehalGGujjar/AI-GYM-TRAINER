@@ -95,7 +95,10 @@ Build a cost-effective, webcam-based AI coach that can:
    http://127.0.0.1:5000/
    ```
 
+![image](C:\Users\Lenovo\AppData\Local\Microsoft\Windows\INetCache\IE\3QD7ONUT\7a878f8c5449465ea8f5b3bc699210e5[1].jpg)
 
+![image](https://user-images.githubusercontent.com/12345678/your-image.png)
+![image](https://user-images.githubusercontent.com/12345678/your-image.png)
 
 
 
